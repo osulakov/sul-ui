@@ -1,0 +1,12 @@
+{
+  "name": "sul-ui",
+  "version": "1.0.0",
+  "description": "Custom React UI library",
+  "main": "index.js",
+  "author": "osulakov",
+  "license": "MIT",
+  "private": null,
+  "devDependencies": {
+    "typescript": "^4.5.2"
+  }
+}
