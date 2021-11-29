@@ -1,7 +1,10 @@
 import React from "react";
+import { Button } from "./components/Button/Button";
 
-const SayHello = ({ name }: { name: string }): JSX.Element => {
+export const SayHello = ({ name }: { name: string }): JSX.Element => {
   return <div>Hey {name}, say hello to TypeScript.</div>;
 };
 
-export default SayHello;
+export const SUIButton = (): JSX.Element => {
+  return <Button />;
+};
