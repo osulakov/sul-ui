@@ -1,0 +1,41 @@
+@import "../../../GlobalStyles/colors.scss";
+
+.text {
+  font-size: 13px;
+  &--small {
+    font-size: 10px;
+  }
+  &--medium {
+    font-size: 13px;
+  }
+  &--large {
+    font-size: 15px;
+  }
+
+  &--default {
+    color: black;
+  }
+  &--grey {
+    color: $cat;
+  }
+  &--success {
+    color: $leaf;
+  }
+  &--warning {
+    color: $sunset;
+  }
+  &--error {
+    color: $alarm;
+  }
+
+  &--title {
+    font-size: 14px;
+    font-weight: bold;
+  }
+  &--normal {
+    font-size: 13px;
+  }
+  &--underlabel {
+    font-size: 10px;
+  }
+}

@@ -1,0 +1,17 @@
+.page {
+  background-color: whitesmoke;
+
+  &--head-container {
+    @media only screen and (min-width: 650px) {
+      display: flex;
+      &--title {
+        text-align: center;
+        width: fit-content;
+        margin: auto;
+        margin-top: auto;
+        margin-bottom: 20px;
+        font-size: 20px;
+      }
+    }
+  }
+}
