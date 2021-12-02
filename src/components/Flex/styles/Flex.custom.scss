@@ -1,0 +1,23 @@
+.flex {
+  display: flex;
+  background-color: transparent;
+  box-sizing: border-box;
+  flex-wrap: wrap;
+  overflow: hidden;
+
+  &--small-margin {
+    margin: 20px;
+  }
+
+  &--medium-margin {
+    margin: 42px;
+  }
+
+  &--offset-from-title {
+    margin-top: 20px;
+  }
+
+  &--offset-from-row {
+    margin-top: 10px;
+  }
+}

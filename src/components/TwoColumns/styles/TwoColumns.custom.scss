@@ -1,0 +1,39 @@
+.two-columns {
+  display: flex;
+  width: 100%;
+  box-sizing: border-box;
+
+  &--offset-from-title {
+    margin-top: 24px;
+  }
+
+  &--offset-from-row {
+    margin-top: 14px;
+  }
+
+  &--align-items-center {
+    align-items: center;
+  }
+
+  &--align-items-flex-start {
+    align-items: flex-start;
+  }
+  &--align-items-flex-end {
+    align-items: flex-end;
+  }
+
+  &--child-wrapper {
+    flex: 1 1 100%;
+    overflow-x: hidden;
+  }
+
+  &--child-wrapper-control-space {
+    margin: -10px;
+    padding: 10px;
+  }
+
+  &--separator {
+    width: 32px;
+    flex: 0 0 auto;
+  }
+}
