@@ -1,0 +1,85 @@
+@import "../../../GlobalStyles/colors.scss";
+
+.custom-table {
+  margin-top: 22px;
+  border-radius: 3px;
+  border: 1px solid #dcdcde;
+  margin-bottom: 22px;
+  padding: 18px;
+  background-color: white;
+
+  &--head-row {
+    background-color: white;
+    border-bottom: 1px solid rgb(220, 220, 222);
+  }
+
+  &--head-cell {
+    padding-left: 12px;
+    padding-top: 12px;
+    padding-bottom: 12px;
+  }
+
+  &--row {
+    display: flex;
+    background-color: white;
+    transition: 0.4s;
+    border-bottom: 1px solid rgb(237, 238, 241);
+
+    &--is-last-row {
+      border-bottom: 1px solid transparent;
+    }
+
+    &:hover {
+      background-color: $page-old-paper-2;
+    }
+  }
+
+  &--content-cell {
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    padding-left: 12px;
+    &--no-padding-left {
+      padding-left: 0px;
+    }
+
+    &--doubled-bottom {
+      border-bottom: 5px solid rgb(237, 238, 241);
+    }
+  }
+
+  &--checkbox-cell {
+    display: flex;
+    padding-left: 10px;
+    padding-right: 10px;
+    align-items: center;
+    justify-items: center;
+    width: 30px;
+    max-width: 30px;
+    border-bottom: 1px solid rgb(237, 238, 241);
+    cursor: pointer;
+  }
+
+  &--on-hover-cell-highlight {
+    &:hover {
+    }
+  }
+
+  &--on-hover-cell-underline {
+    &:hover {
+      text-decoration: underline;
+    }
+  }
+
+  &--no-items-row {
+    font-size: smaller;
+    padding-top: 15px;
+    padding-bottom: 15px;
+    text-align: center;
+    color: gray;
+  }
+
+  &--no-padding {
+    padding: 0px;
+  }
+}

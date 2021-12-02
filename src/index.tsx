@@ -5,3 +5,6 @@ export { TwoColumns } from "./components/TwoColumns/TwoColumns";
 export { SectionWithTitle } from "./components/SectionWithTitle/SectionWithTitle";
 export { Page } from "./components/Page/Page";
 export { Text } from "./components/Text/Text";
+export { Checkbox } from "./components/Checkbox/Checkbox";
+export { SearchInput } from "./components/SearchInput/SearchInput";
+export { CustomTable } from "./components/CustomTable/CustomTable";

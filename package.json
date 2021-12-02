@@ -27,5 +27,8 @@
   },
   "files": [
     "/lib"
-  ]
+  ],
+  "dependencies": {
+    "react-redux": "^7.2.6"
+  }
 }
