@@ -1,6 +1,6 @@
 {
   "name": "sul-ui",
-  "version": "9.3.0",
+  "version": "9.4.0",
   "description": "Custom React UI library",
   "main": "./lib/cjs/index.js",
   "module": "./lib/esm/index.js",
