@@ -1,6 +1,6 @@
 import React from "react";
 
-import "./styles/SearchInput";
+import "./styles/SearchInput.custom.scss";
 
 export type TSearchInput = {
   onChangeValue?: (

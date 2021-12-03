@@ -2,7 +2,7 @@ import { Button } from "../Button/Button";
 import { SearchInput } from "../SearchInput/SearchInput";
 import React from "react";
 
-import "./styles/TableTopControls";
+import "./styles/TableTopControls.custom.scss";
 
 export type TTableTopControls = {
   showAddButton?: boolean;

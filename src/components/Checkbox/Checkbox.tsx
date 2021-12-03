@@ -1,6 +1,6 @@
 import React from "react";
 
-import "./styles/Checkbox";
+import "./styles/Checkbox.custom.scss";
 
 export type TCheckbox = {
   defaultValue?: boolean;

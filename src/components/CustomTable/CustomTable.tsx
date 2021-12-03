@@ -2,7 +2,7 @@ import clsx from "clsx";
 import { Checkbox } from "../Checkbox/Checkbox";
 import React, { useEffect, useMemo, useState } from "react";
 
-import "./styles/CustomTable";
+import "./styles/CustomTable.custom.scss";
 import { TablePagination, TRowsPerPage } from "./TablePagination";
 
 export type TCustomTableHeaders = {

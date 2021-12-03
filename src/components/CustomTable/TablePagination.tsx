@@ -2,7 +2,7 @@ import clsx from "clsx";
 import { Text } from "../Text/Text";
 import React, { useCallback, useMemo } from "react";
 
-import "./styles/TablePagination";
+import "./styles/TablePagination.custom.scss";
 
 export type TTablePagination = {
   itemsCount: number;
