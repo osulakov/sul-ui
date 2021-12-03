@@ -1,7 +1,6 @@
 import clsx from "clsx";
 import { Checkbox } from "../Checkbox/Checkbox";
-import React, { Dispatch, useEffect, useMemo, useState } from "react";
-import { useDispatch } from "react-redux";
+import React, { useEffect, useMemo, useState } from "react";
 
 import "./styles/CustomTable";
 import { TablePagination, TRowsPerPage } from "./TablePagination";
@@ -10,10 +9,10 @@ export type TCustomTableHeaders = {
   title: React.ReactNode;
   width: number;
   height?: number;
-  renderItem: (item: any, dispatch?: any) => React.ReactNode;
+  renderItem: (item: any) => React.ReactNode;
   contentCellPadding?: number;
   align?: "left" | "center" | "right";
-  clickCell?: (item: any, dispatch?: Dispatch<any>) => void;
+  clickCell?: (item: any) => void;
   className?: string;
   onHoverCell?: "highlight" | "underline";
 };
@@ -45,7 +44,6 @@ export const CustomTable: React.FC<TCustomTable> = ({
   defaultPagesCount = 14,
   hasInputRow,
 }) => {
-  const dispatch = useDispatch();
   const [rowsPerPage, setRowsPerPage] = useState<TRowsPerPage>(
     notShowPagination ? 50 : defaultPagesCount
   );
@@ -141,9 +139,9 @@ export const CustomTable: React.FC<TCustomTable> = ({
                           rowProps?.doubledBottomBorder,
                       }
                     )}
-                    onClick={() => el.clickCell && el.clickCell(item, dispatch)}
+                    onClick={() => el.clickCell && el.clickCell(item)}
                   >
-                    {el.renderItem(item, dispatch)}
+                    {el.renderItem(item)}
                   </div>
                 );
               })}
