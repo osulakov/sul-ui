@@ -7,7 +7,7 @@ import "./styles/TableTopControls.custom.scss";
 export type TTableTopControls = {
   showAddButton?: boolean;
   addButtonTitle?: string;
-  onClickAdd?: () => void;
+  onClickRightButton?: () => void;
   showDeleteButton?: boolean;
   showChangeStatusButton?: boolean;
   searchInputProps?: {
@@ -23,7 +23,7 @@ export type TTableTopControls = {
 export const TableTopControls: React.FC<TTableTopControls> = ({
   showAddButton,
   addButtonTitle,
-  onClickAdd,
+  onClickRightButton,
   searchInputProps,
   showRightControls,
   rightControls,
@@ -41,7 +41,7 @@ export const TableTopControls: React.FC<TTableTopControls> = ({
         {showAddButton && (
           <Button
             title={addButtonTitle}
-            onClick={onClickAdd}
+            onClick={onClickRightButton}
             type="main-stroke"
           />
         )}

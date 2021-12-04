@@ -8,3 +8,4 @@ export { Text } from "./components/Text/Text";
 export { Checkbox } from "./components/Checkbox/Checkbox";
 export { SearchInput } from "./components/SearchInput/SearchInput";
 export { CustomTable } from "./components/CustomTable/CustomTable";
+export { TableTopControls } from "./components/CustomTable/TableTopControls";
