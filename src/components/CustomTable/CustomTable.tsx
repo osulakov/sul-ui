@@ -9,7 +9,7 @@ export type TCustomTableHeaders = {
   title: React.ReactNode;
   width: number;
   height?: number;
-  renderItem: (item: any) => React.ReactNode;
+  renderItem: (item: any, renderProps?: any) => React.ReactNode;
   contentCellPadding?: number;
   align?: "left" | "center" | "right";
   clickCell?: (item: any) => void;
@@ -31,6 +31,7 @@ export type TCustomTable = {
   };
   defaultPagesCount?: TRowsPerPage;
   hasInputRow?: boolean;
+  renderProps?: any;
 };
 
 export const CustomTable: React.FC<TCustomTable> = ({
@@ -43,6 +44,7 @@ export const CustomTable: React.FC<TCustomTable> = ({
   rowProps,
   defaultPagesCount = 14,
   hasInputRow,
+  renderProps,
 }) => {
   const [rowsPerPage, setRowsPerPage] = useState<TRowsPerPage>(
     notShowPagination ? 50 : defaultPagesCount
@@ -98,6 +100,7 @@ export const CustomTable: React.FC<TCustomTable> = ({
     );
   }, [headers]);
 
+  // in progress
   const mapInputRow = useMemo(() => {
     return <div>Input row</div>;
   }, [headers]);
@@ -141,7 +144,7 @@ export const CustomTable: React.FC<TCustomTable> = ({
                     )}
                     onClick={() => el.clickCell && el.clickCell(item)}
                   >
-                    {el.renderItem(item)}
+                    {el.renderItem(item, renderProps)}
                   </div>
                 );
               })}
