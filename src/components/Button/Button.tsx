@@ -14,12 +14,12 @@ export type TButton = {
 };
 
 export const Button: React.FC<TButton> = ({
-  title="Button",
-  color="primary",
+  title = "Button",
+  color = "primary",
   onClick,
   style,
   className,
-  type="main-stroke",
+  type = "main-stroke",
   size = "medium",
   children,
 }) => {
@@ -34,8 +34,7 @@ export const Button: React.FC<TButton> = ({
       onClick={onClick}
       style={style}
     >
-      {title}
-      {children}
+      {children ? children : title}
     </div>
   );
 };
