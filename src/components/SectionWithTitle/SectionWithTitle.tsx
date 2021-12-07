@@ -9,6 +9,7 @@ export type TSectionWithTitle = {
   rightButtonProps?: {
     title: string;
     onClick?: () => void;
+    disabled?: boolean;
   };
   style?: React.CSSProperties;
   className?: string;
@@ -34,6 +35,7 @@ export const SectionWithTitle: React.FC<TSectionWithTitle> = ({
               size="medium"
               type="main-stroke"
               onClick={rightButtonProps.onClick}
+              disabled={rightButtonProps.disabled}
             >
               {""}
             </Button>
