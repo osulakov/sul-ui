@@ -1,3 +1,4 @@
+import clsx from "clsx";
 import React from "react";
 import { Button } from "../Button/Button";
 
@@ -17,6 +18,8 @@ export type TSaveBackCancelControls = {
     onSave: () => void;
     type?: "save" | "delete";
   };
+  style?: React.CSSProperties;
+  className?: string;
 };
 
 export const SaveBackCancelControls: React.FC<TSaveBackCancelControls> = ({
@@ -26,9 +29,11 @@ export const SaveBackCancelControls: React.FC<TSaveBackCancelControls> = ({
   backButtonProps,
   cancelButtonProps,
   saveButtonProps,
+  style,
+  className,
 }) => {
   return (
-    <div className="save-back-cancel-controls">
+    <div className={clsx("save-back-cancel-controls", className)} style={style}>
       {showBackButton && (
         <Button
           title="Back"

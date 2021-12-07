@@ -3,6 +3,7 @@ import { SearchInput } from "../SearchInput/SearchInput";
 import React from "react";
 
 import "./styles/TableTopControls.custom.scss";
+import clsx from "clsx";
 
 export type TTableTopControls = {
   showAddButton?: boolean;
@@ -18,6 +19,8 @@ export type TTableTopControls = {
   };
   showRightControls?: boolean;
   rightControls?: React.ReactNode;
+  style?: React.CSSProperties;
+  className?: string;
 };
 
 export const TableTopControls: React.FC<TTableTopControls> = ({
@@ -27,9 +30,11 @@ export const TableTopControls: React.FC<TTableTopControls> = ({
   searchInputProps,
   showRightControls,
   rightControls,
+  style,
+  className,
 }) => {
   return (
-    <div className="table-top-controls">
+    <div className={clsx("table-top-controls", className)} style={style}>
       <div className="table-top-controls--left-side">
         <SearchInput
           onChangeValue={searchInputProps?.onChangeValue}

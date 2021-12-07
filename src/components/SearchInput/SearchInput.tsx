@@ -1,3 +1,4 @@
+import clsx from "clsx";
 import React from "react";
 
 import "./styles/SearchInput.custom.scss";
@@ -7,14 +8,18 @@ export type TSearchInput = {
     e: React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement>
   ) => void;
   placeholder?: string;
+  style?: React.CSSProperties;
+  className?: string;
 };
 
 export const SearchInput: React.FC<TSearchInput> = ({
   onChangeValue,
   placeholder,
+  style,
+  className,
 }) => {
   return (
-    <section className="search-input">
+    <section className={clsx("search-input", className)} style={style}>
       <input
         placeholder={placeholder}
         onChange={(

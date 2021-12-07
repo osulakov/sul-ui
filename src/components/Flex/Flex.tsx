@@ -9,6 +9,7 @@ export type TFlex = {
   offsetFromTitle?: boolean;
   offsetFromRow?: boolean;
   className?: string;
+  style?: React.CSSProperties;
 };
 
 export const Flex: React.FC<TFlex> = ({
@@ -18,6 +19,7 @@ export const Flex: React.FC<TFlex> = ({
   offsetFromTitle,
   offsetFromRow,
   className,
+  style,
 }) => {
   return (
     <div
@@ -27,6 +29,7 @@ export const Flex: React.FC<TFlex> = ({
         "flex--offset-from-title": offsetFromTitle,
         "flex--offset-from-row": offsetFromRow,
       })}
+      style={style}
     >
       {children}
     </div>

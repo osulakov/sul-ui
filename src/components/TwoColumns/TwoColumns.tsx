@@ -13,6 +13,7 @@ export type TTwoColumns = {
   leftControlSpace?: boolean;
   rightControlSpace?: boolean;
   offsetFromRow?: boolean;
+  style?: React.CSSProperties;
 };
 
 export const TwoColumns: React.FC<TTwoColumns> = ({
@@ -25,6 +26,7 @@ export const TwoColumns: React.FC<TTwoColumns> = ({
   leftControlSpace,
   rightControlSpace,
   offsetFromRow,
+  style,
 }) => {
   return (
     <div
@@ -37,6 +39,7 @@ export const TwoColumns: React.FC<TTwoColumns> = ({
           "two-columns--offset-from-row": offsetFromRow,
         }
       )}
+      style={style}
     >
       <div
         className={clsx("two-columns--child-wrapper", {

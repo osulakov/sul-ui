@@ -1,6 +1,6 @@
 import clsx from "clsx";
 import { Checkbox } from "../Checkbox/Checkbox";
-import React, { useEffect, useMemo, useState } from "react";
+import React, { CSSProperties, useEffect, useMemo, useState } from "react";
 
 import "./styles/CustomTable.custom.scss";
 import { TablePagination, TRowsPerPage } from "./TablePagination";
@@ -32,6 +32,8 @@ export type TCustomTable = {
   defaultPagesCount?: TRowsPerPage;
   hasInputRow?: boolean;
   renderProps?: any;
+  style?: CSSProperties | undefined;
+  className?: string;
 };
 
 export const CustomTable: React.FC<TCustomTable> = ({
@@ -45,6 +47,8 @@ export const CustomTable: React.FC<TCustomTable> = ({
   defaultPagesCount = 14,
   hasInputRow,
   renderProps,
+  style,
+  className,
 }) => {
   const [rowsPerPage, setRowsPerPage] = useState<TRowsPerPage>(
     notShowPagination ? 50 : defaultPagesCount
@@ -157,9 +161,10 @@ export const CustomTable: React.FC<TCustomTable> = ({
 
   return (
     <section
-      className={clsx("custom-table", {
+      className={clsx("custom-table", className, {
         "custom-table--no-padding": noPadding,
       })}
+      style={style}
     >
       {mapHead}
       {hasInputRow && mapInputRow}
