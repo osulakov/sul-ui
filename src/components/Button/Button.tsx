@@ -22,19 +22,25 @@ export const Button: React.FC<TButton> = ({
   type = "main-stroke",
   size = "medium",
   children,
+  disabled,
 }) => {
   return (
-    <div
-      className={clsx(
-        className,
-        `custom-button--color${color}`,
-        `custom-button--${size}`,
-        `custom-button--${type}`
-      )}
+    <button
+      disabled={disabled}
+      className={
+        disabled
+          ? clsx("custom-button--disabled", `custom-button--${size}`, className)
+          : clsx(
+              className,
+              `custom-button--color${color}`,
+              `custom-button--${size}`,
+              `custom-button--${type}`
+            )
+      }
       onClick={onClick}
       style={style}
     >
       {children ? children : title}
-    </div>
+    </button>
   );
 };

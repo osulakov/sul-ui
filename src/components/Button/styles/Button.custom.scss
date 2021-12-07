@@ -138,4 +138,9 @@
     @include button;
     background-color: transparent;
   }
+
+  &--disabled {
+    background-color: rgb(210, 212, 209);
+    color: white;
+  }
 }
